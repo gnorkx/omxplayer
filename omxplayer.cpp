@@ -1367,6 +1367,12 @@ int main(int argc, char *argv[])
       case KeyConfig::ACTION_SEEK_BACK_LARGE:
         if(m_omx_reader.CanSeek()) m_incr = -600.0;
         break;
+      case KeyConfig::ACTION_SEEK_FORWARD_TINY:
+        if(m_omx_reader.CanSeek()) m_incr = 5.0;
+        break;
+      case KeyConfig::ACTION_SEEK_BACK_TINY:
+        if(m_omx_reader.CanSeek()) m_incr = -5.0;
+        break;
       case KeyConfig::ACTION_SEEK_RELATIVE:
           m_incr = result.getArg() * 1e-6;
           break;
